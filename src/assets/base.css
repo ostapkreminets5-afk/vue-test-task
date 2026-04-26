@@ -1,0 +1,35 @@
+/* ================================================
+   Design System — CSS Custom Properties (B&W shadcn style)
+   ================================================ */
+
+:root {
+  /* Кольори */
+  --page-bg: #ffffff;
+  --card-bg: #ffffff;
+  --summary-bg: #fafafa;
+  --border-color: #e5e5e5;
+
+  /* Текст */
+  --text-primary: #0a0a0a;
+  --text-secondary: #404040;
+  --text-muted: #a3a3a3;
+
+  /* Акцент — чорний */
+  --accent-color: #0a0a0a;
+  --accent-gradient: #0a0a0a;
+  --accent-subtle: #f5f5f5;
+  --accent-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Статуси */
+  --status-loading-bg: #fafafa;
+  --status-loading-border: #e5e5e5;
+  --status-loading-text: #404040;
+
+  --status-success-bg: #fafafa;
+  --status-success-border: #e5e5e5;
+  --status-success-text: #0a0a0a;
+
+  --status-error-bg: #fafafa;
+  --status-error-border: #e5e5e5;
+  --status-error-text: #0a0a0a;
+}
