@@ -7,13 +7,6 @@ import type {
   SubmitStatus,
 } from '../types'
 
-const validationRules = [
-  (w: string) => w.length > 0,
-  (ar: string) => ar.length > 0,
-  (d: string) => d.length > 0,
-  (p: string) => p.trim().length > 0,
-]
-
 export const useWorkflowStore = defineStore('workflow', () => {
   const workflow = ref<WorkflowType | ''>('')
   const aspectRatio = ref<AspectRatioType | ''>('')
@@ -22,9 +15,10 @@ export const useWorkflowStore = defineStore('workflow', () => {
   const status = ref<SubmitStatus>('idle')
 
   const isValid = computed(() =>
-    validationRules.every((rule, i) =>
-      rule([workflow.value, aspectRatio.value, duration.value, prompt.value][i]),
-    ),
+    workflow.value.length > 0
+    && aspectRatio.value.length > 0
+    && duration.value.length > 0
+    && prompt.value.trim().length > 0,
   )
 
   const isSubmitting = computed(() => status.value === 'loading')

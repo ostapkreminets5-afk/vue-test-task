@@ -1,11 +1,5 @@
 import { useWorkflowStore } from '../common/store'
 import { submitWorkflow } from '../common/api'
-import type { SubmitStatus } from '../common/types'
-
-const resultHandlers: Record<string, (store: ReturnType<typeof useWorkflowStore>) => void> = {
-  success: (store) => store.setStatus('success'),
-  error: (store) => store.setStatus('error'),
-}
 
 export function useWorkflowForm() {
   const store = useWorkflowStore()
@@ -22,9 +16,9 @@ export function useWorkflowForm() {
 
     try {
       await submitWorkflow(formData)
-      resultHandlers.success(store)
+      store.setStatus('success')
     } catch {
-      resultHandlers.error(store)
+      store.setStatus('error')
     }
   }
 
