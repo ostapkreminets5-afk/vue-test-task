@@ -12,7 +12,7 @@ import { StatusDisplay } from './widgets/status-display'
   <div class="page-wrapper">
     <div class="page-container">
       <header class="page-header">
-        <span class="page-header__badge">AI Powered</span>
+        <span class="page-header__badge">AI Assistant Powered</span>
         <h1 class="page-header__title">Video Workflow Starter</h1>
         <p class="page-header__subtitle">
           Configure your AI video generation parameters
